@@ -1,0 +1,35 @@
+{
+  "name": "task-board",
+  "columns": [
+    {
+      "name": "Todo",
+      "tasks": [
+        {
+          "id": "b6e5d62e-1661-43d3-a237-efb3c2f21967",
+          "name": "first task",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "In Progress",
+      "tasks": [
+        {
+          "id": "16e95b89-3fe2-4aa0-a5a2-1371a6818e99",
+          "name": "second task",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "name": "Complete",
+      "tasks": [
+        {
+          "id": "f2893a7a-caec-4c95-80f0-703561ff940c",
+          "name": "third task",
+          "description": ""
+        }
+      ]
+    }
+  ]
+}
