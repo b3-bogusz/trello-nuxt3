@@ -8,6 +8,16 @@
           "id": "b6e5d62e-1661-43d3-a237-efb3c2f21967",
           "name": "first task",
           "description": ""
+        },
+        {
+          "id": "b6e5d62e-1661-43d3-ghy7-efb3c2f21967",
+          "name": "second task",
+          "description": ""
+        },
+        {
+          "id": "b6e5d62e-1661-43d3-a237-efb3c2f24547",
+          "name": "third task",
+          "description": ""
         }
       ]
     },
@@ -16,6 +26,11 @@
       "tasks": [
         {
           "id": "16e95b89-3fe2-4aa0-a5a2-1371a6818e99",
+          "name": "second task",
+          "description": ""
+        },
+        {
+          "id": "b6e5d62e-1661-43d3-a237-efbrhhf21967",
           "name": "second task",
           "description": ""
         }
