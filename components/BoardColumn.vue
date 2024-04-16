@@ -9,6 +9,7 @@ const props = defineProps<{
 const store = useBoardStore();
 const router = useRouter();
 const editnameState = ref(false);
+const newTaskName = ref("");
 
 function editColumnName() {
   editnameState.value = !editnameState.value;
@@ -20,6 +21,14 @@ function deleteColumn(columnIndex) {
 
 function goToTask(taskId) {
   router.push(`/tasks/${taskId}/`);
+}
+
+function addTask() {
+  store.addTask({
+    columnIndex: props.columnIndex,
+    taskName: newTaskName.value,
+  });
+  newTaskName.value = "";
 }
 </script>
 
@@ -47,11 +56,20 @@ function goToTask(taskId) {
     <ul>
       <li v-for="task in column.tasks" :key="task.id">
         <UCard class="mb-4" @click="goToTask(task.id)">
-          <strong>{{ task.name }}</strong>
-          {{ task.description }}
+          <div>
+            <strong>{{ task.name }}</strong>
+          </div>
+          <p>{{ task.description }}</p>
         </UCard>
       </li>
     </ul>
+    <UInput
+      v-model="newTaskName"
+      type="text"
+      placeholder="Create new task"
+      icon="i-heroicons-plus-circle-solid"
+      @keyup.enter="addTask"
+    ></UInput>
   </UContainer>
 </template>
 
