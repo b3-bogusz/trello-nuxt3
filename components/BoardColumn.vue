@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useBoardStore } from "~/stores/boardStore";
+
 const props = defineProps<{
   column: {};
   columnIndex: number;

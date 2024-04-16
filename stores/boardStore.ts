@@ -16,9 +16,21 @@ export const useBoardStore = defineStore("boardStore", () => {
     board.value.columns.splice(columnIndex, 1);
   };
 
+  const getTask = computed(() => {
+    return (taskId) => {
+      for (const column of board.value.columns) {
+        const task = column.tasks.find((task) => task.id === taskId);
+        if (task) {
+          return task;
+        }
+      }
+    };
+  });
+
   return {
     board,
     addColumn,
     deleteColumn,
+    getTask,
   };
 });
